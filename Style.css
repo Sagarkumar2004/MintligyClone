@@ -1,0 +1,755 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+:root{
+    --WhiteColor: #fff; 
+    --mainWhiteColor: #cfd8e3;
+    --themeGreenColor: #2ee6a6;
+    --themeGreenColorDark: #18E299;
+    --ThemeBalckColor: #08090B;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a2540,#06162d 60%,#040b1a);
+  color: var(--WhiteColor);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+body header{
+     position: fixed;
+     width: 100vw;
+     z-index: 100;
+
+}
+.navbar {
+  display: flex;
+   margin: 1px auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 24px 60px;
+   backdrop-filter: blur(6px); 
+  z-index: 100;
+
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+}
+.logo img{
+  width: 20px;
+}
+
+.navbar nav a {
+  padding: 14px;
+  border-radius: 18px;
+  margin: 0 14px;
+  text-decoration: none;
+  color: var(--mainWhiteColor);
+  font-size: 15px;
+  backdrop-filter: blur(6px); 
+  z-index: 110;
+}
+.navbar nav a:hover {
+background: rgba(48, 64, 94, 0.355); 
+}
+
+.navButtons button {
+  margin-left: 12px;
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btnOutline {
+  background: rgba(48, 64, 94, 0.355); 
+  border: 1px solid #3a4a63;
+  color: var(--WhiteColor);
+}
+
+.btnPrimary {
+  background: var(--WhiteColor);
+  color: #000;
+}
+
+/* Hero */
+.hero {
+    height: 700px;
+  text-align: center;
+  padding: 120px 20px;
+  
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+.BtnNew{
+    background-color: var(--themeGreenColorDark);
+    border: none;
+    border-radius: 12px;
+    width: 45px;
+    height: 20px;
+    color: var(--WhiteColor);
+}
+
+.hero h1{
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--themeGreenColor);
+}
+
+.hero p {
+  color: var(--mainWhiteColor);
+  font-size: 18px;
+  margin: 0 auto 40px;
+}
+
+.heroForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.heroForm input {
+  padding: 14px 18px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+ color: var(--mainWhiteColor);
+  width: 260px;
+background: rgba(255, 255, 255, 0.1);
+}
+
+.heroForm button {
+  padding: 14px 24px;
+  border-radius: 25px;
+  border: none;
+  background: var(--WhiteColor);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Docs Wrapper */
+.docsWrapper{
+    height: 770px;
+}
+
+.docsWrapper img{
+  background: rgba(0, 0, 0, 0.6);
+  /* background: radial-gradient(circle at bottom, #000000, #000); */
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+   margin: 1px auto;
+}
+
+
+/* Trusted Section */
+.trusted {
+  padding: 100px 40px;
+  background: radial-gradient(circle at top, #111111, #000);
+}
+
+.trustedInner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.logoRow span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #cfcfcf;
+  opacity: 0.85;
+}
+
+
+/* Intelligence Age Section */
+.aiSection {
+  padding: 120px 40px;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: var(--WhiteColor);
+}
+
+.aiHeader {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.aiHeader h2 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.aiHeader p {
+  color: var(--mainWhiteColor);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Cards Layout */
+.aiCardsContainer {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.aiCard {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+}
+
+.cardTag {
+  font-size: 12px;
+  color: var(--themeGreenColor);
+  letter-spacing: 1px;
+}
+
+.aiCard h3 {
+  font-size: 26px;
+  margin: 14px 0;
+}
+
+.aiCard p {
+  color: var(--mainWhiteColor);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* left card */
+.leftUi {
+  margin-top: 40px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(46,230,166,0.15);
+}
+
+.leftBar {
+  height: 10px;
+  width: 100%;
+  background: linear-gradient(90deg, #2ee6a6, #1bbf8a);
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.leftLines {
+  height: 60px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.copyBtn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* right card */
+.statusRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 60px;
+}
+
+.statusDot {
+  width: 46px;
+  height: 46px;
+  background: var(--themeGreenColor);
+  color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.statusDot img{
+  width: 20px;
+  height: 20px;
+ 
+}
+
+.statusDot.outline {
+  background: transparent;
+  border: 2px dashed rgba(46,230,166,0.5);
+}
+
+
+/* Assistant Section */
+.assistantSection {
+  padding: 140px 40px;
+  background: radial-gradient(circle at center, #0a0a0a, #000);
+  color: #e6edf3;
+}
+
+.assistantContainer {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 32px;
+  padding: 80px 60px 120px;
+  position: relative;
+}
+
+.assistantTag {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #2ee6a6;
+}
+
+.assistantContainer h2 {
+  font-size: 38px;
+  margin: 14px 0;
+}
+
+.assistantDesc {
+  max-width: 600px;
+  margin: 0 auto 70px;
+  color: #9fb3c8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Canvas */
+.assistantCanvas {
+  position: relative;
+  height: 420px;
+}
+
+/* Cards */
+.assistantCard {
+  position: absolute;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  color: #9fb3c8;
+  font-size: 12px;
+  padding: 14px;
+  backdrop-filter: blur(6px);
+}
+
+/* Main card */
+.assistantCard.main {
+  width: 300px;
+  height: 220px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(46,230,166,0.5);
+  box-shadow: 0 0 40px rgba(46,230,166,0.15);
+}
+
+/* Chat UI */
+.chatPlaceholder {
+  height: 130px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.chatInput {
+  height: 36px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sendDot {
+  width: 10px;
+  height: 10px;
+  background: #2ee6a6;
+  border-radius: 50%;
+}
+
+/* Small cards */
+.assistantCard.small {
+  width: 180px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+/* Positioning */
+.topLeft {
+  top: 20px;
+  left: 80px;
+}
+
+.topRight {
+  top: 40px;
+  right: 80px;
+}
+
+.bottomLeft {
+  bottom: 60px;
+  left: 60px;
+}
+
+.bottomRight {
+  bottom: 40px;
+  right: 60px;
+}
+
+/* Enterprise Section */
+.enterpriseSection {
+  padding: 140px 40px;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: #e6edf3;
+}
+
+.enterpriseContent {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.enterpriseTag {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #2ee6a6;
+}
+
+.enterpriseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 10px;
+}
+
+.enterpriseHeader h2 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.enterpriseBtn {
+  background: white;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.enterpriseDesc {
+  color: #9fb3c8;
+  max-width: 520px;
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+/* Features */
+.enterpriseFeatures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+}
+
+.featureIcon {
+  width: 28px;
+  height: 28px;
+  background: rgba(46,230,166,0.15);
+  color: #2ee6a6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.feature h4 {
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: #9fb3c8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Customer Card */
+.customerCard {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background: linear-gradient(135deg, #0c2a3f, #1a1407);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.customerText {
+  padding: 40px;
+}
+
+.storyTag {
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  color: #9fb3c8;
+}
+
+.customerText h3 {
+  font-size: 24px;
+  margin: 12px 0 10px;
+}
+
+.customerText a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stats h4 {
+  font-size: 28px;
+}
+
+.stats span {
+  font-size: 12px;
+  color: #9fb3c8;
+}
+
+/* Art placeholder */
+.customerArt {
+  border-radius: 24px;
+}
+
+
+/* CTA Section */
+.ctaSection {
+  padding: 140px 40px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 60%),
+    #000;
+  color: #fff;
+}
+
+.ctaSection h2 {
+  font-size: 52px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.ctaSection p {
+  color: #b5c3cf;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 70px;
+}
+
+.btnPrimary {
+  background: white;
+  color: black;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btnSecondary {
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* Divider */
+.ctaDivider {
+  width: 1px;
+  height: 60px;
+  margin: 0 auto 60px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+}
+
+/* Bottom cards */
+.ctaCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: auto;
+}
+
+.ctaCard {
+  padding: 30px 40px;
+}
+
+.ctaIcon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  background: rgba(46,230,166,0.15);
+  color: #2ee6a6;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+}
+
+.ctaCard h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.ctaCard p {
+  font-size: 14px;
+  color: #9fb3c8;
+  margin-bottom: 10px;
+}
+
+.ctaCard a {
+  color: #2ee6a6;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
+.footer {
+  background: #0b0c0d;
+  color: #e6e6e6;
+  padding: 60px 80px 30px;
+  font-family: system-ui, sans-serif;
+}
+
+/* Top */
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.logoDot {
+  width: 14px;
+  height: 14px;
+  background: #2ee6a6;
+  border-radius: 50%;
+}
+
+.footerSocials a {
+  color: #888;
+  margin-left: 14px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.footerSocials img{
+  width: 20px;
+  height: 20px;
+}
+
+.footerSocials a:hover {
+  color: #fff;
+}
+
+/* Divider */
+.footerDivider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 30px 0;
+}
+
+/* Links */
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.footerCol h5 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+.footerCol a {
+  display: block;
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footerCol a:hover {
+  color: #fff;
+}
+
+
+/* Bottom */
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #888;
+}
+
+
+
